@@ -1,3 +1,8 @@
+//Kevin Lin
+//APCS pd8
+//HW41 -- Array of Steel
+//2017-11-28
+
 /***************************
  * class SuperArray
  * Wrapper class for array. Facilitates resizing,
@@ -11,7 +16,7 @@ public class SuperArray
   private int _size;    //number of elements in this SuperArray
 
 
-  //default constructor – initializes 10-item array
+  //default constructor - initializes 10-item array
   public SuperArray()
   {
       _data = new int[10];
@@ -53,8 +58,9 @@ public class SuperArray
   //           return old value at index
   public int set( int index, int newVal )
   {
+      int temp = _data[index];
       _data[index] = newVal;
-      return newVal;
+      return temp;
   }
 
 
@@ -65,7 +71,7 @@ public class SuperArray
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
- 
+
       for( int i = 0; i < curtis._data.length; i++ ) {
       curtis.set( i, i * 2 );
       }
