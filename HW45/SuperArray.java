@@ -89,10 +89,9 @@ public class SuperArray implements List
 
   //inserts an item at index
   public void add( int index, Object newVal )
-  {
-    //first expand if necessary
+  {    //first expand if necessary
+    if (index < 0 || index > size()) {throw new IndexOutOfBoundsException();}
     if ( _size >= _data.length )
-      if (index < 0 || index >= size()) {throw new IndexOutOfBoundsException();}
       expand();
     for( int i = _size; i > index; i-- ) {
       _data[i] = _data[i-1]; //each slot gets value of left neighbor
