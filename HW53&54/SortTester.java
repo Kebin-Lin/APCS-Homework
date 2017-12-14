@@ -1,3 +1,8 @@
+//Kevin Lin
+//APCS1 pd8
+//HW53 -- Solid Comparative Analysis
+//2017-12-14
+
 import sorts.*;
 import java.util.ArrayList;
 

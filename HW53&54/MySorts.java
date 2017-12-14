@@ -1,3 +1,8 @@
+//Kevin Lin
+//APCS1 pd8
+//HW53 -- One File to Bind Them All...
+//2017-12-14
+
 import java.util.ArrayList;
 
 public class MySorts {
