@@ -30,7 +30,7 @@ public class StatPrinter {
     }
   }
 
-  public int max(ArrayList<Integer> a) {
+  public int max(ArrayList<Integer> a) { //O(n)
     Integer max = a.get(0);
     for (Integer i : a) {
       if (i > max) {max = i;}
@@ -38,7 +38,7 @@ public class StatPrinter {
     return max;
   }
 
-  public void printHistogram(int max) {
+  public void printHistogram(int max) { //O(n)
     int max2 = max(_freq);
     for (int i = 0; i < _freq.size(); i++) {
       System.out.print(i + " : ");
@@ -50,7 +50,7 @@ public class StatPrinter {
     }
   }
 
-  public boolean isLocalMode(int index) {
+  public boolean isLocalMode(int index) { //O(1)
     if (index == 0 || index == _freq.size()-1) {return false;}
     return (_freq.get(index) > _freq.get(index-1) && _freq.get(index) > _freq.get(index+1));
   }
