@@ -1,0 +1,72 @@
+/*
+Expansions: 
+When there are no vowels in a word, the letter y can now be treated as a vowel.
+Punctuation is dealt with. When a word is posessive, indicated by an ending of "'s", then it will have the same ending once translated.
+End punctuation remains the same.
+Capitalization of the first letter of the input results in capitalization of the first letter of the output.
+Scanner 
+*/
+
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+
+	while(sc.hasNext()) {
+	    String nxt = sc.next();
+	    System.out.println("Input: " + nxt);
+	    System.out.println("Output:" +  engToPig(nxt));
+	}
+	
+public static String withPuncTransl(String lower){
+	
+	int puncIndex = findPunc(lower);
+	String punc = lower.substring(puncIndex, puncIndex +1);
+	String pigL = "";
+
+	if (findPunc(lower) == lower.length()-1){
+	    pigL = engToPig(lower.substring(0, puncIndex)) + punc;
+	    return pigL;
+	}
+
+	if ((lower.substring(puncIndex)).equals("'")
+	    || (lower.substring(puncIndex)).equals("'s")){
+	    pigL = engToPig(lower.substring(0, puncIndex))
+		+ punc;
+	    return pigL;
+	}
+
+	else{
+	    String woPunc = lower.substring(0, puncIndex) 
+		+ lower.substring(puncIndex + 1);
+	    pigL = engToPig(woPunc);
+	    pigL = pigL.substring(0, puncIndex) + punc + pigL.substring(puncIndex);
+	}
+	/*	
+	if (ENDCHRS.indexOf(lower.substring(lower.length()-1)) >= 0
+	    && puncIndex != lower.length()-1){
+	    System.out.println("ITOSKR");
+	    }*/
+	return pigL;
+	}
+	
+	public static String engToPig(String w){
+	String lower = w.toLowerCase();
+	String pigL = "";
+	
+	if (beginsWithVowel(lower)){
+	    pigL = begVowelTransl(lower);
+	}
+
+	if (hasAVowel(w)){
+	    pigL = hasVowelTransl(lower);
+
+	}
+	else {
+	    pigL = noVowelTransl(lower);
+	}
+
+	if (! allLetters(lower)){
+	    pigL = withPuncTransl(lower);
+	    } 
+
+	return upperFix(w, pigL); 
+    }
