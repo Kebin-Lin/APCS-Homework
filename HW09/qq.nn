@@ -1,0 +1,38 @@
+Kevin Lin
+APCS2 Pd1
+HW09 -- Yaaasss Queens
+2018-02-27
+
+2x2 - Not solvable, putting a queen on any spot eliminates all other spots.
+
+3x3 - Not solvable, putting a queen on a corner allows for two open spots, but
+      putting a queen on either open spot will eliminate the other.
+
+4x4 - x q x x and its reflections/rotations
+      x x x q
+      q x x x
+      x x q x
+
+5x5 - q x x x x and its reflections/rotations
+      x x x q x
+      x q x x x
+      x x x x q
+      x x q x x
+
+6x6 - x x x q x x and its reflections/rotations
+      q x x x x x
+      x x x x q x
+      x q x x x x
+      x x x x x q
+      x x q x x x
+
+7x7 - q x x x x x x and its reflections/rotations
+      x x x x q x x
+      x q x x x x x
+      x x x x x q x
+      x x q x x x x
+      x x x x x x q
+      x x x q x x x
+
+8x8 - I can't find a solution, or at least one that goes by the pattern of the
+      last few boards.
