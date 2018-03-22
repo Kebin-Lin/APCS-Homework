@@ -1,6 +1,6 @@
 //Clarence Chen, Kevin Lin
 //APCS2 Pd1
-//HW22 -- Give and Take
+//HW23 -- Give and Take
 //2018-03-23
 
 /*****************************************************
