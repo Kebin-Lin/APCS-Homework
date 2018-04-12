@@ -8,9 +8,15 @@
 * Simulates a rudimentary Scheme interpreter
 *
 * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
-*   1. Steal underpants.
-*   2. ...
-*   5. Profit!
+*   Step through a String array created by splitting the input
+*   1. If the current String is an operator, put it into an operator stack
+*   2. Else if the current String is a ), pop from the operator stack and perform
+*      the operation on the numbers popped from the numbers stack until a ( is
+*      reached, then push the value from the operation back into the number stack
+*   3. Else push the current String into the number stack, which should either be
+*      a number or a (
+*   4. Once the entire String array is traversed, return the value popped from the
+*      number stack
 *
 * STACK OF CHOICE: LLStack
 * Because: There is no need to create a new underlying array every time expansion is needed
