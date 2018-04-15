@@ -48,9 +48,11 @@ public class NodeQueue<T> implements Queue<T> {
     }
 
     while(!q.isEmpty()) {
+      System.out.println(q.peekFront());
       System.out.println(q.dequeue());
     }
 
     System.out.println(q.dequeue());
+    System.out.println(q.peekFront());
   }
 }
