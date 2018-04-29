@@ -1,0 +1,48 @@
+Kevin Lin
+APCS2 Pd1
+HW41 -- A Tree Grows in 251  or BK
+2018-04-30
+
+Prerequisite: Two DIFFERENT tree traversals
+
+I. Inorder and Preorder Traversals
+  1. If there are no elements in the traversals, return nothing
+  2. If there is only one element which is the same in both traversals, return the element
+    a. If they are not the same element, the two traversals are not for the same tree
+  3. Record the first element in the preorder traversal, which is the root of the tree
+  4. Run this algorithm on all elements left of the root on the inorder traversal, and n
+     elements right of the root in the preorder traversal, in which n equals the number
+     of elements left of the root in the preorder traversal
+    a. The returned value will be the left subtree
+  5. Run this algorithm on all elements right of the root on the inorder traversal, and
+     on the remaining elements of the preorder traversal
+    a. The returned value will be the right subtree
+  6. Return the root of the tree
+
+II. Inorder and Postorder Traversals
+  1. If there are no elements in the traversals, return nothing
+  2. If there is only one element which is the same in both traversals, return the element
+    a. If they are not the same element, the two traversals are not for the same tree
+  3. Record the last element in the postorder traversal, which is the root of the tree
+  4. Run this algorithm on all elements right of the root on the inorder traversal, and n
+     elements left of the root in the preorder traversal, in which n equals the number
+     of elements right of the root in the preorder traversal
+    a. The returned value will be the right subtree
+  5. Run this algorithm on all elements left of the root on the inorder traversal, and
+     on the remaining elements of the preorder traversal
+    a. The returned values will be the left subtree
+  6. Return the root of the tree
+
+III. Preorder and Postorder Traversals
+  1. If there are no elements in the traversals, return nothing
+  2. If there is only one element which is the same in both traversals, return the element
+    a. If they are not the same element, the two traversals are not for the same tree
+  3. Record the first element in the preorder traversal, this is the root of the tree
+  4. The element immediately to the right of the root in the preorder traversal is the root of the left subtree
+  5. Run this algorithm on all elements up to and including the root of the left subtree on the postorder
+     traversal, and n elements right of the root of the left subtree preorder traversal, in which n is equal to the
+     number of elements in the portion of the postorder traversal being used
+    a. The returned value will be the left subtree
+  6. Run this algorithm on the remaining elements (not including the root) for both subtrees
+    a. The returned value will be the right subtree
+  7. Return the root of the tree
